@@ -1,3 +1,2 @@
-# React Botivi
+# Admin panel for enterprise bot manager
 
-React Bot frontend for admin and managers
