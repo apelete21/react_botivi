@@ -1,2 +1,3 @@
-# react_botivi
+# React Botivi
+
 React Bot frontend for admin and managers
