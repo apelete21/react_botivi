@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Logo from "@/utils/icons/logo";
 import Link from "next/link";
 
 export default function Home() {
@@ -145,21 +146,69 @@ export default function Home() {
           </h1>
           <div>
             <div className="w-2/3 flex mx-auto gap-12 mt-10">
-              <div className="flex-1 bg-blue-100 dark:bg-gray-900 w-2/6 h-auto px-2 py-8 grid gap-8 text-center">
+              <div className="flex-1 bg-blue-100 dark:bg-gray-900 w-2/6 h-auto px-2 py-8 grid gap-8 text-center rounded-lg">
                 <p className="font-bold text-6xl">152,5$</p>
                 <p className="text-2xl">monthly</p>
               </div>
-              <div className="flex-1 bg-blue-100 dark:bg-gray-900 w-2/6 h-auto px-2 py-8 grid gap-8 text-center">
+              <div className="flex-1 bg-blue-100 dark:bg-gray-900 w-2/6 h-auto px-2 py-8 grid gap-8 text-center rounded-lg">
                 <p className="font-bold text-6xl">873,6$</p>
                 <p className="text-2xl">half-yearly</p>
               </div>
-              <div className="flex-1 bg-blue-100 dark:bg-gray-900 w-2/6 h-auto px-2 py-8 grid gap-8 text-center">
+              <div className="flex-1 bg-blue-100 dark:bg-gray-900 w-2/6 h-auto px-2 py-8 grid gap-8 text-center rounded-lg">
                 <p className="font-bold text-6xl">1659,5$</p>
                 <p className="text-2xl">yearly</p>
               </div>
             </div>
           </div>
         </section>
+        <footer className="h-1/3 py-12 bg-blue-100 dark:bg-gray-900 w-screen mt-12 grid">
+          <h1 className="text-center font-extrabold text-4xl pb-8 w-full sm:w-2/3 mx-auto grid justify-center">
+            <Logo color="skyblue" />
+          </h1>
+          <div>
+            <div className="w-2/6 flex mx-auto gap-12 mt-2">
+              <Link
+                href="#"
+                className="flex-1 bg-blue-100 dark:bg-gray-900 w-2/6 h-auto px-2 py-8 grid gap-8 text-center hover:opacity-50"
+              >
+                Home
+              </Link>
+              <Link
+                href="#"
+                className="flex-1 bg-blue-100 dark:bg-gray-900 w-2/6 h-auto px-2 py-8 grid gap-8 text-center hover:opacity-50"
+              >
+                Features
+              </Link>
+              <Link
+                href="#"
+                className="flex-1 bg-blue-100 dark:bg-gray-900 w-2/6 h-auto px-2 py-8 grid gap-8 text-center hover:opacity-50"
+              >
+                Pricing
+              </Link>
+              <Link
+                href="#"
+                className="flex-1 bg-blue-100 dark:bg-gray-900 w-2/6 h-auto px-2 py-8 grid gap-8 text-center hover:opacity-50"
+              >
+                Help
+              </Link>
+              <Link
+                href="#"
+                className="flex-1 bg-blue-100 dark:bg-gray-900 w-2/6 h-auto px-2 py-8 grid gap-8 text-center hover:opacity-50"
+              >
+                Privacy
+              </Link>
+            </div>
+          </div>
+          <div className="w-full flex m-auto justify-between px-12 mt-2 items-center">
+            <h1 className="font-extrabold flex-1 text-4xl pb-8 w-fit h-full mt-8">
+              Sign up to our newslater
+            </h1>
+            <form onSubmit={(e) => e.preventDefault()} className="w-fit flex flex-1 gap-8 h-full">
+              <input type="email" placeholder="Enter your email..." className="w-2/3 rounded-md focus:outline-none p-2" />
+              <button type="submit" className=" bg-blue-700 text-white px-8 rounded-md ">Subscribe</button>
+            </form>
+          </div>
+        </footer>
       </main>
     </>
   );
