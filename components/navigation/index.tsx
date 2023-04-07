@@ -6,7 +6,9 @@ import Link from "next/link";
 function Navbar() {
   return (
     <div
-      className={"flex flex-row justify-between align-middle fixed w-screen"}
+      className={
+        "flex flex-row justify-between align-middle fixed w-screen bg-white dark:bg-gray-950"
+      }
     >
       <div>
         <Link href={data.Home.link} className={`flex py-2 px-4`}>

@@ -1,8 +1,10 @@
 import Head from "next/head";
 import Logo from "@/utils/icons/logo";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
+  
   return (
     <>
       <Head>
@@ -14,7 +16,7 @@ export default function Home() {
       <main className="bg-white dark:bg-gray-950 dark:text-white overflow-x-hidden">
         <section className="h-screen bg-transparent w-screen flex flex-column sm:flex-row">
           <div className="text-black dark:text-white flex-1 gap-12 flex flex-col justify-center items-center">
-            <h1 className="w-full sm:w-2/3 text-left text-7xl font-bold">
+            <h1 className="w-full sm:w-2/3 text-left text-6xl font-bold">
               Le Bot qui vous facilite le quotidien
             </h1>
             <div className="text-left text-2xl w-full sm:w-2/3 ">
@@ -26,9 +28,16 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <div
-          // className="flex-1 bg-slate-300"
-          ></div>
+          <div className="flex-1 flex justify-center items-center">
+            <Image
+              src={"/security.svg"}
+              alt="home"
+              placeholder="blur"
+              blurDataURL="/security.svg"
+              width={700}
+              height={500}
+            />
+          </div>
         </section>
         <section className="w-screen bg-blue-100 dark:bg-gray-900 py-10">
           <section className="gap-3 w-3/4 m-auto flex flex-column sm:flex-row ">
@@ -66,11 +75,18 @@ export default function Home() {
           </section>
         </section>
         <section className="h-screen bg-transparent w-screen flex flex-column sm:flex-row">
-          <div
-          // className="flex-1 bg-slate-300"
-          ></div>
+          <div className="flex-1 flex justify-center items-center">
+            <Image
+              src={"/security.svg"}
+              alt="home"
+              placeholder="blur"
+              blurDataURL="/security.svg"
+              width={500}
+              height={500}
+            />
+          </div>
           <div className="text-black dark:text-white flex-1 gap-12 flex flex-col justify-center items-center">
-            <h1 className="w-full sm:w-2/3 text-left text-7xl font-bold">
+            <h1 className="w-full sm:w-2/3 text-left text-5xl font-bold">
               Accéder à vos services de façon instantannée
             </h1>
             <div className="text-left text-2xl w-full sm:w-2/3 ">
@@ -85,7 +101,7 @@ export default function Home() {
         </section>
         <section className="h-screen bg-transparent w-screen bg-blue-100 dark:bg-gray-900 flex flex-column sm:flex-row">
           <div className="text-black dark:text-white flex-1 gap-12 flex flex-col justify-center items-center">
-            <h1 className="w-full sm:w-2/3 text-left text-7xl font-bold">
+            <h1 className="w-full sm:w-2/3 text-left text-5xl font-bold">
               Baissez le coût de vos bots whatsapp
             </h1>
             <p className="w-full sm:w-2/3 text-left">
@@ -107,13 +123,20 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <div
-          // className="flex-1 bg-slate-300"
-          ></div>
+          <div className="flex-1 flex justify-center items-center">
+            <Image
+              src={"/price.svg"}
+              alt="home"
+              placeholder="blur"
+              blurDataURL="/price.svg"
+              width={400}
+              height={400}
+            />
+          </div>
         </section>
         <section className="h-screen bg-transparent w-screen flex flex-column sm:flex-row">
           <div className="text-black dark:text-white flex-1 gap-12 flex flex-col justify-center items-center">
-            <h1 className="w-full sm:w-2/3 text-left text-7xl font-bold">
+            <h1 className="w-full sm:w-2/3 text-left text-5xl font-bold">
               Sécurité maximale de vos transmissions
             </h1>
             <p className="w-full sm:w-2/3 text-left">
@@ -136,9 +159,16 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <div
-          // className="flex-1 bg-slate-300"
-          ></div>
+          <div className="flex-1 flex justify-center items-center">
+            <Image
+              src={"/security.svg"}
+              alt="home"
+              placeholder="blur"
+              blurDataURL="/security.svg"
+              width={400}
+              height={400}
+            />
+          </div>
         </section>
         <section className="h-1/3 py-12 bg-transparent w-screen grid">
           <h1 className="text-center font-extrabold text-4xl pb-8 w-full sm:w-2/3 mx-auto">
@@ -161,7 +191,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <footer className="h-1/3 py-12 bg-blue-100 dark:bg-gray-900 w-screen mt-12 grid">
+        <footer className="h-1/3 pt-12 pb-5 bg-blue-100 dark:bg-gray-900 w-screen mt-12 grid">
           <h1 className="text-center font-extrabold text-4xl pb-8 w-full sm:w-2/3 mx-auto grid justify-center">
             <Logo color="skyblue" />
           </h1>
@@ -201,12 +231,33 @@ export default function Home() {
           </div>
           <div className="w-full flex m-auto justify-between px-12 mt-2 items-center">
             <h1 className="font-extrabold flex-1 text-4xl pb-8 w-fit h-full mt-8">
-              Sign up to our newslater
+              Sign up to our newsletter
             </h1>
-            <form onSubmit={(e) => e.preventDefault()} className="w-fit flex flex-1 gap-8 h-full">
-              <input type="email" placeholder="Enter your email..." className="w-2/3 rounded-md focus:outline-none p-2" />
-              <button type="submit" className=" bg-blue-700 text-white px-8 rounded-md ">Subscribe</button>
+            <form
+              onSubmit={(e) => e.preventDefault()}
+              className="w-fit flex flex-1 gap-8 h-full justify-end"
+            >
+              <input
+                type="email"
+                placeholder="Enter your email..."
+                className="w-2/3 rounded-md focus:outline-none p-2"
+              />
+              <button
+                type="submit"
+                className=" bg-blue-500 text-white px-8 rounded-md "
+              >
+                Subscribe
+              </button>
             </form>
+          </div>
+          <div className="flex mx-12 justify-between pt-6 mt-2 items-center border-t-2 border-blue-200">
+            <p className="flex flex-1">CopyRight 2023 Botivi, All Rights Reserved.</p>
+            <div className="flex flex-1 justify-end gap-6">
+              <img className="w-8 rounded" src="/linkedin.svg" alt="linkedin" />
+              <img className="w-8 rounded" src="/insta.svg" alt="linkedin" />
+              <img className="w-8 rounded" src="/twitter.svg" alt="linkedin" />
+              <img className="w-8 rounded" src="/facebook.svg" alt="linkedin" />
+            </div>
           </div>
         </footer>
       </main>
